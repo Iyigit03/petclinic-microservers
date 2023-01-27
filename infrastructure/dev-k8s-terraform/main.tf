@@ -176,7 +176,7 @@ resource "aws_instance" "worker-1" {
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
     subnet_id = "subnet-0df61fdbfda601e40"  # select own subnet_id of us-east-1a
-    availability_zone = "us-east-1a"
+    availability_zone = "us-east-1b"
     tags = {
         Name = "worker-1"
         "kubernetes.io/cluster/petclinicCluster" = "owned"
@@ -194,7 +194,7 @@ resource "aws_instance" "worker-2" {
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
     subnet_id = "subnet-0c0daef84689821f4"  # select own subnet_id of us-east-1a
-    availability_zone = "us-east-1a"
+    availability_zone = "us-east-1d"
     tags = {
         Name = "worker-2"
         "kubernetes.io/cluster/petclinicCluster" = "owned"
